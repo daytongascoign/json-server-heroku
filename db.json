@@ -1,31 +1,20 @@
-{
-  "posts": [
-    {
-      "id": 1,
-      "title": "Post 1"
-    },
-    {
-      "id": 2,
-      "title": "Post 2"
-    },
-    {
-      "id": 3,
-      "title": "Post 3"
+{  
+  "test":[
+     {
+    "id":"0x30f315a4ea64f399b0b325d0cc2b4559e9374a78",
+    "token_id":"1605506313",
+    "name":"Test",
+    "description":"A test with description.",
+    "token_image":"http://api.neumekca.city/test/image/image1.png",
+    "external_url":"http://api.neumekca.city/",
+    "types":2,
+    "grade":1,
+    "grade_text":"Common",
+    "powers":55,
+    "effect":"Buffrate refresh increased to 55%",
+    "created_time":1605505992,
+    "author":"0x30f315a4ea64f399b0b325d0cc2b4559e9374a50",
+    "block":2277600
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    },
-    {
-      "id": 2,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
