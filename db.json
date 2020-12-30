@@ -1,20 +1,154 @@
 {  
   "test":[
-     {
-    "id":"0x30f315a4ea64f399b0b325d0cc2b4559e9374a45",
-    "token_id":"1605506376",
-    "name":"Test",
-    "description":"A test with description.",
-    "token_image":"http://api.neumekca.city/test/image/image1.png",
-    "external_url":"http://api.neumekca.city/",
-    "types":2,
-    "grade":1,
-    "grade_text":"Common",
-    "powers":55,
-    "effect":"Buffrate refresh increased to 55%",
-    "created_time":1605505992,
-    "author":"0x30f315a4ea64f399b0b325d0cc2b4559e9374a50",
-    "block":2277600
+    {
+        "id": 1,
+        "name": "Rank Null",
+        "description": "Different sailors were given different ranks... which came with privileges, of course.",
+        "token_image": "http://api.neumekca.city/null/image/1.png",
+        "types": 1,
+        "grade": 1,
+        "grade_text": "Common",
+        "effect": "Initial buffrate increased in range 12-14"
+    },
+    {
+        "id": 2,
+        "name": "Rank Null",
+        "description": "Different sailors were given different ranks... which came with privileges, of course.",
+        "token_image": "http://api.neumekca.city/null/image/2.png",
+        "types": 1,
+        "grade": 2,
+        "grade_text": "Rare",
+        "effect": "Initial buffrate increased in range 15-18"
+    },
+    {
+        "id": 3,
+        "name": "Rank Null",
+        "description": "Different sailors were given different ranks... which came with privileges, of course.",
+        "token_image": "http://api.neumekca.city/null/image/3.png",
+        "types": 1,
+        "grade": 3,
+        "grade_text": "Epic",
+        "effect": "Initial buffrate increased in range 19-23"
+    },
+    {
+        "id": 4,
+        "name": "Rank Null",
+        "description": "Different sailors were given different ranks... which came with privileges, of course.",
+        "token_image": "http://api.neumekca.city/null/image/4.png",
+        "types": 1,
+        "grade": 4,
+        "grade_text": "Legendary",
+        "effect": "Initial buffrate increased in range 24-29"
+    },
+    {
+        "id": 5,
+        "name": "Rank Null",
+        "description": "Different sailors were given different ranks... which came with privileges, of course.",
+        "token_image": "http://api.neumekca.city/null/image/5.png",
+        "types": 1,
+        "grade": 5,
+        "grade_text": "Transcendent",
+        "effect": "Initial buffrate increased in range 30-34"
+    },
+    {
+        "id": 6,
+        "name": "Potion Null",
+        "description": "A strange elixir found in the seas of NAR provides a boost for sailors who brave its waves.",
+        "token_image": "http://api.neumekca.city/null/image/6.png",
+        "types": 2,
+        "grade": 1,
+        "grade_text": "Common",
+        "effect": "Buffrate refresh increased to 55%"// keep original percentage
+    },
+    {
+        "id": 7,
+        "name": "Potion Null",
+        "description": "A strange elixir found in the seas of NAR provides a boost for sailors who brave its waves.",
+        "token_image": "http://api.neumekca.city/null/image/7.png",
+        "types": 2,
+        "grade": 2,
+        "grade_text": "Rare",
+        "effect": "Buffrate refresh increased to 60%"
+    },
+    {
+        "id": 8,
+        "name": "Potion Null",
+        "description": "A strange elixir found in the seas of NAR provides a boost for sailors who brave its waves.",
+        "token_image": "http://api.neumekca.city/null/image/8.png",
+        "types": 2,
+        "grade": 3,
+        "grade_text": "Epic",
+        "effect": "Buffrate refresh increased to 70%"
+    },
+    {
+        "id": 9,
+        "name": "Potion Null",
+        "description": "A strange elixir found in the seas of NAR provides a boost for sailors who brave its waves.",
+        "token_image": "http://api.neumekca.city/null/image/9.png",
+        "types": 2,
+        "grade": 4,
+        "grade_text": "Legendary",
+        "effect": "Buffrate refresh increased to 85%"
+    },
+    {
+        "id": 10,
+        "name": "Potion Null",
+        "description": "A strange elixir found in the seas of NAR provides a boost for sailors who brave its waves.",
+        "token_image": "http://api.neumekca.city/null/image/10.png",
+        "types": 2,
+        "grade": 5,
+        "grade_text": "Transcendent",
+        "effect": "Buffrate refresh increased to 105%"
+    },
+    {
+        "id": 11,
+        "name": "Refine Null",
+        "description": "In the NAR-oceans, the better your skills, the better your rewards.",
+        "token_image": "http://api.neumekca.city/null/image/11.png",
+        "types": 3,
+        "grade": 1,
+        "grade_text": "Common",
+        "effect": "Maximum buffrate increased in range 35-41"
+    },
+    {
+        "id": 12,
+        "name": "Refine Null",
+        "description": "In the NAR-oceans, the better your skills, the better your rewards.",
+        "token_image": "http://api.neumekca.city/null/image/12.png",
+        "types": 3,
+        "grade": 2,
+        "grade_text": "Rare",
+        "effect": "Maximum buffrate increased in range 42-55"
+    },
+    {
+        "id": 13,
+        "name": "Refine Null",
+        "description": "In the NAR-oceans, the better your skills, the better your rewards.",
+        "token_image": "http://api.neumekca.city/null/",
+        "types": 3,
+        "grade": 3,
+        "grade_text": "Epic",
+        "effect": "Maximum buffrate increased in range 56-71"
+    },
+    {
+        "id": 14,
+        "name": "Refine Null",
+        "description": "In the NAR-oceans, the better your skills, the better your rewards.",
+        "token_image": "http://api.neumekca.city/null/image/14.png",
+        "types": 3,
+        "grade": 4,
+        "grade_text": "Legendary",
+        "effect": "Maximum buffrate increased in range 72-89"
+    },
+    {
+        "id": 15,
+        "name": "Refine Null",
+        "description": "In the NAR-oceans, the better your skills, the better your rewards.",
+        "token_image": "http://api.neumekca.city/null/image/15.png",
+        "types": 3,
+        "grade": 5,
+        "grade_text": "Transcendent",
+        "effect": "Maximum buffrate increased more thang 90"
     }
-  ]
+]
 }
