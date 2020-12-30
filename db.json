@@ -58,7 +58,7 @@
         "types": 2,
         "grade": 1,
         "grade_text": "Common",
-        "effect": "Buffrate refresh increased to 55%"// keep original percentage
+        "effect": "Buffrate refresh increased to 55%"
     },
     {
         "id": 7,
@@ -123,8 +123,8 @@
     {
         "id": 13,
         "name": "Refine Null",
-        "description": "In the NAR-oceans, the better your skills, the better your rewards.",
-        "token_image": "http://api.neumekca.city/null/",
+        "description": "In the NAR-oceans, the better your skills, the bimage/12.pngetter your rewards.",
+        "token_image": "http://api.neumekca.city/null/image/12.png",
         "types": 3,
         "grade": 3,
         "grade_text": "Epic",
