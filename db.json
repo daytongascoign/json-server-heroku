@@ -835,6 +835,14 @@
         "decimals": 18,
         "chainId": 256,
         "logoURI": "https://img.neumekca.city/images/0x83ac2f7cabe1382be946f1498fb62d1a4c699000.png"
+      },
+      {
+        "name": "ZERO Token",
+        "address": "0xace469b7Bfe1759FF6a4BEF62feb3623EFeA6d58",
+        "symbol": "ZERO",
+        "decimals": 18,
+        "chainId": 256,
+        "logoURI": "https://img.neumekca.city/images/0x83ac2f7cabe1382be946f1498fb62d1a4c699000.png"
       }
     ]
   }]
