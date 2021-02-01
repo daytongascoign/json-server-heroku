@@ -270,7 +270,7 @@
       }
     ]
   }],
-  "hecochain": [{
+  "tokenlist": [{
     "name": "HRC20 Token List",
     "timestamp": "2021-01-19T03:24:50.732Z",
     "version": {
@@ -324,5 +324,6 @@
         "chainId": 128,
         "logoURI": "https://img.neumekca.city/images/0x0298c2b32eae4da002a15f36fdf7615bea3da047.png"
       }
-}]
+    ]
+  }]
 }
