@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs')
+const Web3 = require('web3')
 
 
 const NFT_FACTORY_ADDRESS = '0xE10a109218D0e7c258A49f69BC7337193f28e815';
@@ -8,15 +9,17 @@ const NFT_ADDRESS = '0x1c137Ba270fbcD22D3c7Bdac101f0A21cb0885cE';
 const HTTP_NETWORK = 'https://http-mainnet-node.huobichain.com';
 
 const app = express();
-const PORT = 5000;
+const PORT = 3000;
 
 app.use(bodyParser.json());
 app.get('/collection', function(req,res){
+    res.header("Access-Control-Allow-Origin", "*");
     var s = JSON.parse(fs.readFileSync('collection.json'));
 
     res.send(s);
 });
 app.get('/null-card/:id', function(req,res){
+    res.header("Access-Control-Allow-Origin", "*");
     var cardAvaiables = JSON.parse(fs.readFileSync('null-cards.json'));
     var collections = JSON.parse(fs.readFileSync('collection.json'));
     var result = cardAvaiables.find(x => x.id == req.params.id);
@@ -83,6 +86,7 @@ app.get('/null-card/:id', function(req,res){
 });
 
 app.get('/hecochain', function(req,res){
+    res.header("Access-Control-Allow-Origin", "*");
     var s = JSON.parse(fs.readFileSync('token-list.json'));
     res.send(s);
 });
