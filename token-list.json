@@ -1,0 +1,56 @@
+{
+    "name": "HRC20 Token List",
+    "timestamp": "2021-01-19T03:24:50.732Z",
+    "version": {
+      "major": 1,
+      "minor": 9,
+      "patch": 29
+    },
+    "tags": {},
+    "logoURI": "https://img.neumekca.city/images/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png",
+    "keywords": [
+      "neumekca-city",
+      "default"
+    ],
+    "tokens": [{
+        "name": "ZERO Token",
+        "address": "0x9Ec4C0f72f068731f439351193d2060b7dC684B5",
+        "symbol": "ZERO",
+        "decimals": 18,
+        "chainId": 128,
+        "logoURI": "https://img.neumekca.city/images/0x9Ec4C0f72f068731f439351193d2060b7dC684B5.png"
+      },
+      {
+        "name": "LEON Token",
+        "address": "0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47",
+        "symbol": "LEON",
+        "decimals": 18,
+        "chainId": 128,
+        "logoURI": "https://img.neumekca.city/images/0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47.png"
+      },
+      {
+        "name": "Heco-Peg HBTC Token",
+        "address": "0xf307910A4c7bbc79691fD374889b36d8531B08e3",
+        "symbol": "HBTC",
+        "decimals": 18,
+        "chainId": 128,
+        "logoURI": "https://img.neumekca.city/images/0xf307910A4c7bbc79691fD374889b36d8531B08e3.png"
+      },
+      {
+        "name": "Heco-Peg USDTHECO Token",
+        "address": "0xa71edc38d189767582c38a3145b5873052c3e47a",
+        "symbol": "HUSDT",
+        "decimals": 18,
+        "chainId": 128,
+        "logoURI": "https://img.neumekca.city/images/0xa71edc38d189767582c38a3145b5873052c3e47a.png"
+      },
+      {
+        "name": "HUSD",
+        "address": "0x0298c2b32eae4da002a15f36fdf7615bea3da047",
+        "symbol": "HUSD",
+        "decimals": 18,
+        "chainId": 128,
+        "logoURI": "https://img.neumekca.city/images/0x0298c2b32eae4da002a15f36fdf7615bea3da047.png"
+      }
+    ]
+  }

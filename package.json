@@ -1,17 +1,27 @@
 {
-  "name": "json-server-deploy",
+  "name": "node",
   "version": "1.0.0",
-  "description": "Simple json database to deploy to the host of your choice",
-  "main": "server.js",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
-  "keywords": [
-    "json-server,heroku, node, REST API"
-  ],
-  "author": "Jesper Orb",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^0.16.2"
+    "express": "^4.17.1",
+    "uuid": "^8.2.0",
+    "body-parser": "1.19.0",
+    "web3": "1.3.4",
+    "web3-eth": "1.3.4",
+    "web3-eth-contract": "1.3.4",
+    "@ethersproject/contracts": "5.0.10",
+    "bignumber.js": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
