@@ -148,6 +148,36 @@
       "rank": 5,
       "rank_text": "Omega",
       "effect": "Maximum of CHRONOS INJECTED max with random 154-179"
+    }, {
+      "id": "0xe57A6704a569E719Ad21294E6b703B17FEde7CbD",
+      "token_id": "1612569369",
+      "name": "Chronos Init",
+      "description": "Zero is a Gamma NULL who served in the Cromag War as an ally to Neumékca alongside another NULL, Fifteen.",
+      "token_image": "https://img.neumekca.city/null/1.5.png",
+      "external_url": "https://img.neumekca.city/null/1612569369",
+      "types": 1,
+      "rank": 5,
+      "rank_text": "Omega",
+      "skills": 113,
+      "effect": "Initial CHRONOS INJECTED start with 113",
+      "created_time": 1612569369,
+      "author": "0xe57A6704a569E719Ad21294E6b703B17FEde7CbD",
+      "block": 2079094
+    }, {
+      "id": "0xe57A6704a569E719Ad21294E6b703B17FEde7CbD",
+      "token_id": "1612569370",
+      "name": "Chronos Step",
+      "description": "The Psychiatrist provides Chronos and assignments to Zero, and is implied to be an operative of the Neumékca government.",
+      "token_image": "https://img.neumekca.city/null/2.5.png",
+      "external_url": "https://img.neumekca.city/null/1612569370",
+      "types": 2,
+      "rank": 5,
+      "rank_text": "Omega",
+      "skills": 149,
+      "effect": "Increment CHRONOS INJECTED grow with 149%",
+      "created_time": 1612569370,
+      "author": "0xe57A6704a569E719Ad21294E6b703B17FEde7CbD",
+      "block": 2079094
     }
   ],
   "hecochain": [{
