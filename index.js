@@ -35,58 +35,50 @@ app.get('/null-card/:id', function(req,res){
         var contract = new web3.eth.Contract(nft_abi, NFT_ADDRESS);
         var contract_factory = new web3.eth.Contract(nft_factory_abi, NFT_FACTORY_ADDRESS);
         let lst = [];
-        contract.methods.totalSupply().call().then((x) => {
-            if (cardAvaiables.length != x) {
-                for (let i = 0; i < x; i++) {
-                    contract.methods.tokenByIndex([i]).call()
-                        .then((cardId) => {
-                            if (cardAvaiables.find(abi => abi.id == cardId) == undefined) {
-                                contract_factory.methods.cardIndex(Number(cardId)).call()
-                                    .then((cardIndex) => {
+        let cardId  = req.params.id;
+        if (cardAvaiables.find(abi => abi.id == cardId) == undefined) {
+            contract_factory.methods.cardIndex(Number(cardId)).call()
+                .then((cardIndex) => {
 
-                                        var cardInfo = collections.find(collection =>
-                                            collection.types == cardIndex.types
-                                            && collection.rank == cardIndex.rank);
-                                   
-                                        contract.methods.ownerOf(Number(cardId)).call()
-                                        .then((owner)=>{
-                                            var obj = {
-                                                id : cardId,
-                                                token_id : owner+ '.' + cardId,
-                                                name : cardInfo.name,
-                                                description : cardInfo.description,
-                                                token_image : cardInfo.token_image,
-                                                external_url : 'https://img.neumekca.city/null/'+ cardId,
-                                                types : cardInfo.types,
-                                                rank : cardInfo.rank,
-                                                rank_text : cardInfo.rank_text,
-                                                skills : cardIndex.skills,
-                                                effect : cardInfo.effect.split('random')[0] + cardIndex.skills,
-                                                created_time : cardId,
-                                                author : owner,
-                                                block : ''
-                                            }
-                                            cardAvaiables.push(obj);
-                                            if(cardAvaiables.length == x){
-                                                let data = JSON.stringify(cardAvaiables);
-                                                console.log(cardAvaiables);
-                                                fs.writeFileSync('null-cards.json', data);
-                                            }
-                                        })
+                    var cardInfo = collections.find(collection =>
+                        collection.types == cardIndex.types
+                        && collection.rank == cardIndex.rank);
+               
+                    contract.methods.ownerOf(Number(cardId)).call()
+                    .then((owner)=>{
+                        var obj = {
+                            id : cardId,
+                            token_id : owner+ '.' + cardId,
+                            name : cardInfo.name,
+                            description : cardInfo.description,
+                            token_image : cardInfo.token_image,
+                            external_url : 'https://img.neumekca.city/null/'+ cardId,
+                            types : cardInfo.types,
+                            rank : cardInfo.rank,
+                            rank_text : cardInfo.rank_text,
+                            skills : cardIndex.skills,
+                            effect : cardInfo.effect.split('random')[0] + cardIndex.skills,
+                            created_time : cardId,
+                            author : owner,
+                            block : ''
+                        }
+                        cardAvaiables.push(obj);
+                        let data = JSON.stringify(cardAvaiables);
+                        console.log(cardAvaiables);
+                        fs.writeFileSync('null-cards.json', data);
 
-                                       
+                        req.send(obj)
+                    })
 
-                                       
-                                    })
+                   
+
+                   
+                })
 
 
-                            }
-                        });
-                }
-              
-            }
-        })
+        }
     }
+    result = cardAvaiables.find(x => x.id == req.params.id);
     res.send(result);
 });
 
