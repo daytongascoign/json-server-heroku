@@ -4,11 +4,7 @@ const fs = require('fs')
 
 const Web3 = require('web3')
 
-var CONTRACT_ADDRESS = {
-    NFT_FACTORY_ADDRESS : '0xE10a109218D0e7c258A49f69BC7337193f28e815',
-    NFT_ADDRESS : '0x1c137Ba270fbcD22D3c7Bdac101f0A21cb0885cE',
-    HTTP_NETWORK : 'https://http-mainnet-node.huobichain.com'
-}
+
 
 const app = express();
 const PORT = 3000;
@@ -16,26 +12,33 @@ const PORT = 3000;
 app.use(bodyParser.json());
 
 function GetContractById(chainId){
+    var CONTRACT_ADDRESS = {
+        NFT_FACTORY_ADDRESS : '0xE10a109218D0e7c258A49f69BC7337193f28e815',
+        NFT_ADDRESS : '0x1c137Ba270fbcD22D3c7Bdac101f0A21cb0885cE',
+        HTTP_NETWORK : 'https://http-mainnet-node.huobichain.com'
+    }
     switch(chainId){
-        case 56 :
+        case '56' :
             break;
-        case 97 :
+        case '97' :
             CONTRACT_ADDRESS = {
                 NFT_FACTORY_ADDRESS : '0x154dfB0a0e3E81f0659ACB2973b185735dF88b10',
                 NFT_ADDRESS : '0xAA990C25732906b87B1fF3934a76505Fc0991608',
                 HTTP_NETWORK : 'https://data-seed-prebsc-1-s1.binance.org:8545/'
             }
             break;
-        case 128 : 
+        case '128' : 
                 CONTRACT_ADDRESS = {
                     NFT_FACTORY_ADDRESS : '0xE10a109218D0e7c258A49f69BC7337193f28e815',
                     NFT_ADDRESS : '0x1c137Ba270fbcD22D3c7Bdac101f0A21cb0885cE',
                     HTTP_NETWORK : 'https://http-mainnet-node.huobichain.com'
                 }
             break;
-        case 256 : 
+        case '256' : 
             break;
     }
+
+    return CONTRACT_ADDRESS;
 }
 
 
@@ -45,8 +48,9 @@ app.get('/null-card/:id/:chainId', function(req,res){
     var cardAvaiables = JSON.parse(fs.readFileSync('null-cards.json'));
     var collections = JSON.parse(fs.readFileSync('collection.json'));
     var result = cardAvaiables.find(x => x.id == req.params.id);
+    console.log(req.params)
     if (result == "" || result == null || result == undefined) {
-        GetContractById(req.params.chainId);
+        var CONTRACT_ADDRESS = GetContractById(req.params.chainId);
         console.log(CONTRACT_ADDRESS);
         var web3 = new Web3(CONTRACT_ADDRESS.HTTP_NETWORK);
         var nft_abi = JSON.parse(fs.readFileSync(`nft.json`));
@@ -62,7 +66,7 @@ app.get('/null-card/:id/:chainId', function(req,res){
                     var cardInfo = collections.find(collection =>
                         collection.types == cardIndex.types
                         && collection.rank == cardIndex.rank);
-               
+                    console.log(cardId)
                     contract.methods.ownerOf(Number(cardId)).call()
                     .then((owner)=>{
                         var obj = {
