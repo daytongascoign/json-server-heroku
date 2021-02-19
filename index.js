@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 function GetContractById(chainId){
     var CONTRACT_ADDRESS = {
-        NFT_FACTORY_ADDRESS : '0xE10a109218D0e7c258A49f69BC7337193f28e815',
+        NFT_FACTORY_ADDRESS : '0xf2EfcA47BD1C7A478F84156f4fb6745186c29A25',
         NFT_ADDRESS : '0x1c137Ba270fbcD22D3c7Bdac101f0A21cb0885cE',
         HTTP_NETWORK : 'https://http-mainnet-node.huobichain.com'
     }
@@ -29,7 +29,7 @@ function GetContractById(chainId){
             break;
         case '128' : 
                 CONTRACT_ADDRESS = {
-                    NFT_FACTORY_ADDRESS : '0xE10a109218D0e7c258A49f69BC7337193f28e815',
+                    NFT_FACTORY_ADDRESS : '0xf2EfcA47BD1C7A478F84156f4fb6745186c29A25',
                     NFT_ADDRESS : '0x1c137Ba270fbcD22D3c7Bdac101f0A21cb0885cE',
                     HTTP_NETWORK : 'https://http-mainnet-node.huobichain.com'
                 }
@@ -48,10 +48,10 @@ app.get('/null-card/:id/:chainId', function(req,res){
     var cardAvaiables = JSON.parse(fs.readFileSync('null-cards.json'));
     var collections = JSON.parse(fs.readFileSync('collection.json'));
     var result = cardAvaiables.find(x => x.id == req.params.id);
-    console.log(req.params)
+
     if (result == "" || result == null || result == undefined) {
         var CONTRACT_ADDRESS = GetContractById(req.params.chainId);
-        console.log(CONTRACT_ADDRESS);
+
         var web3 = new Web3(CONTRACT_ADDRESS.HTTP_NETWORK);
         var nft_abi = JSON.parse(fs.readFileSync(`nft.json`));
         var nft_factory_abi = JSON.parse(fs.readFileSync(`nft-factory.json`));
@@ -60,14 +60,14 @@ app.get('/null-card/:id/:chainId', function(req,res){
         let lst = [];
         let cardId  = req.params.id;
         if (cardAvaiables.find(abi => abi.id == cardId) == undefined) {
-            contract_factory.methods.cardIndex(Number(cardId)).call()
+            contract_factory.methods.cardIndex(cardId).call()
                 .then((cardIndex) => {
 
                     var cardInfo = collections.find(collection =>
                         collection.types == cardIndex.types
                         && collection.rank == cardIndex.rank);
-                    console.log(cardId)
-                    contract.methods.ownerOf(Number(cardId)).call()
+     
+                    contract.methods.ownerOf(cardId).call()
                     .then((owner)=>{
                         var obj = {
                             id : cardId,
